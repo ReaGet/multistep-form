@@ -108,7 +108,8 @@ main {
 .form[data-current-step="1"] .sidebar__item[data-step="1"] .sidebar__item-number,
 .form[data-current-step="2"] .sidebar__item[data-step="2"] .sidebar__item-number,
 .form[data-current-step="3"] .sidebar__item[data-step="3"] .sidebar__item-number,
-.form[data-current-step="4"] .sidebar__item[data-step="4"] .sidebar__item-number {
+.form[data-current-step="4"] .sidebar__item[data-step="4"] .sidebar__item-number,
+.form[data-current-step="5"] .sidebar__item[data-step="4"] .sidebar__item-number {
   background-color: var(--light-blue);
   color: var(--marine-blue);
   border-color: var(--light-blue);
@@ -488,6 +489,18 @@ main {
   color: var(--purplish-blue)
 }
 
+    /* THANKS */
+
+.content__step.thanks {
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks__title {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
 /* CONTENT BOTTOM */
 
 .content__bottom {
@@ -539,11 +552,11 @@ main {
 }
 
 .form[data-current-step="1"] .btn[data-action="back"],
-.form[data-current-step="4"] .btn[data-action="next"] {
+.form[data-current-step="4"] .btn.btn--dark {
   display: none;
 }
 
-.form[data-current-step="4"] .btn[data-action="confirm"] {
+.form[data-current-step="4"] .btn.btn--primary {
   display: block;
 }
 
