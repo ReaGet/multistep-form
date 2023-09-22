@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+
+  <main>
+    <div class="form" data-current-step="5">
+      <div class="form__sidebar">
+        <div class="sidebar__item" data-step="1">
+          <div class="sidebar__item-number">1</div>
+          <div class="sidebar__item-info">
+            <span class="sidebar__item-title">Step 1</span>
+            <span class="sidebar__item-subtitle">Your info</span>
+          </div>
+        </div>
+
+        <div class="sidebar__item" data-step="2">
+          <div class="sidebar__item-number">2</div>
+          <div class="sidebar__item-info">
+            <span class="sidebar__item-title">Step 2</span>
+            <span class="sidebar__item-subtitle">Select plan</span>
+          </div>
+        </div>
+
+        <div class="sidebar__item" data-step="3">
+          <div class="sidebar__item-number">3</div>
+          <div class="sidebar__item-info">
+            <span class="sidebar__item-title">Step 3</span>
+            <span class="sidebar__item-subtitle">Add-nns</span>
+          </div>
+        </div>
+
+        <div class="sidebar__item" data-step="4">
+          <div class="sidebar__item-number">4</div>
+          <div class="sidebar__item-info">
+            <span class="sidebar__item-title">Step 4</span>
+            <span class="sidebar__item-subtitle">Summary</span>
+          </div>
+        </div>
+      </div>
+      <div class="form__content">
+        <div class="content__top">
+          <div class="content__title">Personal info</div>
+          <div class="content__subtitle">Please provide your name, email address, and phone number.</div>
+        </div>
+        <div class="content__middle">
+          <div class="content__step info" data-step="1">
+            <label class="info__label" for="name">
+              <span class="info__label-title">Name</span>
+              <input class="info__label-input" type="text" id="name" placeholder="e.g. Stephen King">
+            </label>
+            <label class="info__label" for="name">
+              <span class="info__label-title">Email Address</span>
+              <input class="info__label-input" type="text" id="name" placeholder="e.g. stephenking@lorem.com">
+            </label>
+            <label class="info__label" for="name">
+              <span class="info__label-title">Phone Number</span>
+              <input class="info__label-input" type="text" id="name" placeholder="e.g. +1 234 567 890">
+            </label>
+          </div>
+          <div class="content__step plan" data-step="2" data-plan="monthly">
+            <div class="plan__wrapper">
+              <div class="plan__item">
+                <input class="plan__input" type="radio" id="arcade" name="plan" checked>
+                <label class="plan__label" for="arcade">
+                  <img src="./assets/images/icon-arcade.svg" alt="">
+                  <div class="plan__info">
+                    <span class="plan__title">Arcade</span>
+                    <span class="plan__price">$9/mo</span>
+                    <span class="plan__subtitle">2 months free</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="plan__item">
+                <input class="plan__input" type="radio" id="advaned" name="plan">
+                <label class="plan__label" for="advaned">
+                  <img src="./assets/images/icon-advanced.svg" alt="">
+                  <div class="plan__info">
+                    <span class="plan__title">Advanced</span>
+                    <span class="plan__price">$12/mo</span>
+                    <span class="plan__subtitle">2 months free</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="plan__item">
+                <input class="plan__input" type="radio" id="pro" name="plan">
+                <label class="plan__label" for="pro">
+                  <img src="./assets/images/icon-pro.svg" alt="">
+                  <div class="plan__info">
+                    <span class="plan__title">Pro</span>
+                    <span class="plan__price">$15/mo</span>
+                    <span class="plan__subtitle">2 months free</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="plan__period">
+              <input class="period__input" type="checkbox" id="period">
+              <label class="period__label" for="period">
+                <span class="period__label-text period__month">Monthly</span>
+                <div class="period__checkbox"></div>
+                <span class="period__label-text period__year">Yearly</span>
+              </label>
+            </div>
+          </div>
+          <div class="content__step addons" data-step="3">
+            <div class="addon__item">
+              <input class="addon__input" type="checkbox" id="service" checked>
+              <label class="addon__label" for="service">
+                <div class="addon__checkbox"></div>
+                <div class="addon__info">
+                  <span class="addon__title">Online service</span>
+                  <span class="addon__subtitle">Access to multiplayer games</span>
+                </div>
+                <span class="addon__price">+$1/mo</span>
+              </label>
+            </div>
+
+            <div class="addon__item">
+              <input class="addon__input" type="checkbox" id="storage">
+              <label class="addon__label" for="storage">
+                <div class="addon__checkbox"></div>
+                <div class="addon__info">
+                  <span class="addon__title">Larger storage</span>
+                  <span class="addon__subtitle">Extra 1TB of cloud save</span>
+                </div>
+                <span class="addon__price">+$2/mo</span>
+              </label>
+            </div>
+
+            <div class="addon__item">
+              <input class="addon__input" type="checkbox" id="profile">
+              <label class="addon__label" for="profile">
+                <div class="addon__checkbox"></div>
+                <div class="addon__info">
+                  <span class="addon__title">Customizable Profile</span>
+                  <span class="addon__subtitle">Custom theme on your profile</span>
+                </div>
+                <span class="addon__price">+$1/mo</span>
+              </label>
+            </div>
+          </div>
+          <div class="content__step result__wrapper" data-step="4">
+            <div class="result__table">
+              <div class="result__row result__row--plan">
+                <span class="result__plan">
+                  <div class="result__plan-title">Arcade (Monthly)</div>
+                  <div class="result__plan-subtitle">Change</div>
+                </span>
+                <span class="result__value">$9/mo</span>
+              </div>
+              <div class="result__additional">
+                <div class="result__row">
+                  <span class="result__title">Online service</span>
+                  <span class="result__value">+$1/mo</span>
+                </div>
+                <div class="result__row">
+                  <span class="result__title">Larger storage</span>
+                  <span class="result__value">+$2/mo</span>
+                </div>
+              </div>
+            </div>
+            <div class="result__total">
+              <span class="result__title">Total (per month)</span>
+              <span class="result__value">+$12/mo</span>
+            </div>
+          </div>
+          <div class="content__step thanks" data-step="5">
+            <div class="thanks__title">Thank you!</div>
+            <div class="thanks__descr">
+              Thanks for confirming your subscribition! We hope you have fun using our platform. If you ever need support, please feel free to email us at <a href="mailto:support@loremgaming.com">support@loremgaming.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="content__bottom">
+          <button class="btn btn--empty" data-action="back">
+            <span>Go Back</span>
+          </button>
+          <button class="btn btn--dark" data-action="next">Next Step</button>
+          <button class="btn btn--primary" data-action="confirm">Confirm</button>
+        </div>
+      </div>
+  
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
