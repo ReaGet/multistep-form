@@ -494,11 +494,18 @@ main {
 .content__step.thanks {
   align-items: center;
   justify-content: center;
+  padding-top: 70px;
+  gap: 20px
 }
 
 .thanks__title {
-  font-size: 3.4rem;
+  margin-top: 13px;
+  font-size: 3.2rem;
   font-weight: 700;
+}
+
+.thanks__descr {
+  font-size: 1.7rem;
 }
 
 /* CONTENT BOTTOM */
