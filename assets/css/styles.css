@@ -361,6 +361,7 @@ main {
 }
 
 .addon__checkbox {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   border: 1px solid var(--light-gray);
@@ -495,7 +496,7 @@ main {
   align-items: center;
   justify-content: center;
   padding-top: 70px;
-  gap: 20px
+  gap: 18px
 }
 
 .thanks__title {
@@ -505,7 +506,19 @@ main {
 }
 
 .thanks__descr {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  color: var(--cool-gray);
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.thanks__descr a {
+  color: var(--cool-gray);
+  text-decoration: none;
+}
+
+.thanks__descr a:hover {
+  text-decoration: underline;
 }
 
 /* CONTENT BOTTOM */
@@ -569,4 +582,184 @@ main {
 
 .form[data-current-step="5"] .btn {
   display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 940px) {
+  .form {
+    /* gap: 20px; */
+    gap: 0;
+  }
+
+  .form__content {
+    max-width: initial;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 660px) {
+  .form {
+    flex-direction: column;
+    max-width: initial;
+    max-height: initial;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .form__sidebar {
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 170px;
+    padding-left: 0;
+    padding-top: 30px;
+    background-size: cover;
+    border-radius: 0;
+    background-image: url(../images/bg-sidebar-mobile.svg);
+    gap: 15px;
+  }
+
+  .sidebar__item-info {
+    display: none;
+  }
+
+  .form__content {
+    height: 100%;
+    padding: 0;
+    background-color: var(--magnolia);
+  }
+
+  .content__top {
+    gap: 14px;
+  }
+
+  .content__title {
+    font-size: 2.3rem;
+  }
+
+  .content__subtitle {
+    line-height: 1.4em;
+  }
+
+  .content__inner {
+    padding: 33px 25px 30px;
+    margin: -71px 16px 0;
+    background-color: var(--white);
+    border-radius: var(--rounded);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .content__middle {
+    padding-top: 23px;
+  }
+
+  .content__step.info {
+    gap: 16px;
+  }
+
+  .info__label {
+    gap: 4px;
+  }
+
+  .info__label-title {
+    font-size: 1.2rem;
+  }
+
+  .info__label-input {
+    padding: 10px 14px;
+    border-radius: 4px;
+  }
+  
+  .plan__wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .plan__label {
+    flex-direction: row;
+    padding: 15px;
+    gap: 13px;
+  }
+
+  .plan__info {
+    gap: 11px;
+  }
+
+  .content__step.addons {
+    gap: 13px;
+  }
+
+  .addon__label {
+    height: auto;
+    padding: 14px;
+    font-size: 1.4rem;
+    gap: 15px;
+  }
+
+  .addon__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .addon__price {
+    font-size: 1.2rem;
+  }
+
+  .result__table {
+    padding: 17px 15px;
+    font-size: 1.3rem;
+  }
+
+  .result__row--plan {
+    padding-bottom: 15px;
+  }
+
+  .result__additional {
+    padding-top: 15px;
+  }
+
+  .result__total {
+    padding: 0px 15px;
+  }
+
+  .result__total .result__value {
+    font-size: 1.6rem;
+  }
+
+  .thanks {
+    padding-top: 9px;
+  }
+
+  .thanks img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .thanks__title {
+    font-size: 2.4rem;
+    margin-top: 6px;
+  }
+
+  .thanks__descr {
+    font-size: 1.6rem;
+    margin-top: -6px;
+  }
+
+  .content__bottom {
+    padding: 15px 25px;
+    background-color: var(--white);
+  }
+
+  .btn {
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  .btn--dark,
+  .btn--primary {
+    padding: 12px 16px;
+    margin-right: -9px;
+  }
 }
